@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlankOutConsole", "BlankOutConsole\BlankOutConsole.csproj", "{BAD887BD-82A4-4667-8516-9AEA96202F26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlankOutCore", "BlankOutCore\BlankOutCore.csproj", "{009558AE-A72D-4C66-A909-17279D788C04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAD887BD-82A4-4667-8516-9AEA96202F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAD887BD-82A4-4667-8516-9AEA96202F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAD887BD-82A4-4667-8516-9AEA96202F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAD887BD-82A4-4667-8516-9AEA96202F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{009558AE-A72D-4C66-A909-17279D788C04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{009558AE-A72D-4C66-A909-17279D788C04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{009558AE-A72D-4C66-A909-17279D788C04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{009558AE-A72D-4C66-A909-17279D788C04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEC0F13D-901F-4C63-80BF-229E047827A3}
+	EndGlobalSection
+EndGlobal
