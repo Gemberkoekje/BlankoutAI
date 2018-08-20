@@ -6,10 +6,10 @@ namespace BlankOutCore
 {
     public class Player
     {
-        public Player(int id)
+        public Player(int id, int boardWidth, int boardHeight)
         {
             ID = id;
-            Board = new Board();
+            Board = new Board(boardWidth, boardHeight);
             PiecesPlaced = 0;
             
         }

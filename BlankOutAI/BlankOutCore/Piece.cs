@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace BlankOutCore
 {
-    class Piece
+    public class Piece
     {
-        List<Field> Fields;
+        public List<Field> Fields;
 
-        Piece(bool startingPiece, int d6)
+        public Piece(bool startingPiece, int d6)
         {
             var Pieces = new Pieces();
             if (startingPiece)
@@ -17,13 +18,35 @@ namespace BlankOutCore
                 Fields = Pieces.PlayingShapes(d6);
         }
 
-        void Rotate()
+        public void Rotate()
         {
+            int width = Fields.Max(f => f.X)+1;
+            int height = Fields.Max(f => f.Y)+1;
+            Fields.ForEach(f => f.X = (f.X - (width / 2)));
+            Fields.ForEach(f => f.Y = (f.Y - (height / 2)));
+            foreach (var field in Fields)
+            {
 
+                var tx = field.X;
+                field.X = -field.Y;
+                field.Y = tx;
+            }
+            Fields.ForEach(f => f.X = (f.X + (width / 2)));
+            Fields.ForEach(f => f.Y = (f.Y + (height / 2)));
         }
-        void Mirror()
+        public void MirrorHorizontal()
         {
-
+            int width = Fields.Max(f => f.X);
+            Fields.ForEach(f => f.X = (f.X - (width / 2)));
+            Fields.ForEach(f => f.X = -f.X);
+            Fields.ForEach(f => f.X = (f.X + (width / 2)));
+        }
+        public void MirrorVertical()
+        {
+            int height = Fields.Max(f => f.Y);
+            Fields.ForEach(f => f.Y = (f.Y - (height / 2)));
+            Fields.ForEach(f => f.Y = -f.Y);
+            Fields.ForEach(f => f.Y = (f.Y + (height / 2)));
         }
     }
 }
